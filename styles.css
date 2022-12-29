@@ -2,6 +2,7 @@
   --pinkshade: #efdbce;
   --white: #fff;
   --greenshade: #175c4c;
+  --greenfont: #46ad95;
 }
 
 *,
@@ -67,7 +68,7 @@ h6 {
   height: fit-content;
   background-color: var(--pinkshade);
   border-bottom: 3px solid var(--white);
-  padding: 0.5em;
+  padding: 0.5em calc(100% - 90vw);
   top: 0;
 }
 
@@ -95,10 +96,58 @@ a {
 }
 
 .hero {
-  margin-top: 100px;
   display: flex;
+  height: 60vh;
+  background-color: var(--pinkshade);
+  padding: 0 calc(100% - 90vw);
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  margin-top: 95px;
+}
+
+.hero-cta {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-cta .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--greenfont);
+}
+
+.hero-cta .hero-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.hero-cta .hero-text {
+  font-size: 1.2rem;
+  width: 500px;
 }
 
 .hero-img {
-  width: 50%;
+  width: 100%;
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  margin: -10px 0;
+}
+
+button {
+  padding: 10px 40px;
+  background-color: var(--greenfont);
+  color: var(--white);
+  border: none;
+  width: 250px;
+  font-size: 1.2rem;
+  font-family: "Merriweather", serif;
 }
