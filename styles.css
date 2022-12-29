@@ -1,3 +1,9 @@
+:root {
+  --pinkshade: #efdbce;
+  --white: #fff;
+  --greenshade: #175c4c;
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +20,7 @@ body {
 }
 
 body {
-  background-color: white;
+  background-color: var(--white);
   font-size: 16px;
   font-family: Roboto, sans-serif;
   line-height: 1.5;
@@ -48,5 +54,51 @@ h6 {
 }
 
 .logo {
-  width: 300px;
+  width: 200px;
+  height: auto;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--pinkshade);
+  border-bottom: 3px solid var(--white);
+  padding: 0.5em;
+  top: 0;
+}
+
+.navbar > ul {
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li > a {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #46ad95;
+  font-family: Merriweather;
+  font-weight: 700;
+}
+
+.hero {
+  margin-top: 100px;
+  display: flex;
+}
+
+.hero-img {
+  width: 50%;
 }
