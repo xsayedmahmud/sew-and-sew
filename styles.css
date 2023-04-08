@@ -1,11 +1,4 @@
-:root {
-  --pinkshade: #efdbce;
-  --white: #fff;
-  --greenshade: #175c4c;
-  --greenfont: #46ad95;
-  --heading: deeppink;
-  --fontshade: #00cc76;
-}
+/* css reset */
 
 * {
   scroll-behavior: smooth;
@@ -60,14 +53,24 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* css reset */
+
+:root {
+  --pinkshade: #efdbce;
+  --white: #fff;
+  --greenshade: #175c4c;
+  --greenfont: hsl(166, 42%, 48%);
+  --heading: deeppink;
+  --fontshade: #00cc76;
+}
+
 .logo {
   width: 200px;
-  height: auto;
 }
 
 .heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -76,12 +79,21 @@ h6 {
   border-bottom: 4px solid var(--white);
   padding: 0.5em calc(100% - 90vw);
   top: 0;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.navbar {
+  margin-left: auto;
 }
 
 .navbar > ul {
   display: flex;
-  gap: 3em;
-  justify-content: space-between;
+  gap: 1.5em;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 ul {
@@ -92,6 +104,7 @@ ul {
 
 li > a {
   font-size: 1.2rem;
+  text-align: left;
 }
 
 a {
@@ -99,30 +112,33 @@ a {
   color: #46ad95;
   font-family: Merriweather;
   font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 5px;
 }
 
-section,
-footer {
-  padding: 0 calc(100% - 90vw);
+a:hover {
+  background-color: white;
+  color: lightslategray;
 }
 
 .hero {
   display: flex;
-  height: 60vh;
+  width: 100%;
   background-color: var(--pinkshade);
-
   justify-content: center;
   align-items: center;
-  gap: 3em;
-  margin-top: 95px;
+  margin-top: 100px;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 50px;
 }
 
 .hero-cta {
   text-align: left;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.5em;
+  /* margin-top: 100px; */
 }
 
 .hero-cta .hero-title {
@@ -138,12 +154,13 @@ footer {
 
 .hero-cta .hero-text {
   font-size: 1.2rem;
-  width: 500px;
+  max-width: 500px;
 }
 
 .hero-img {
-  width: 100%;
-  flex: 1;
+  max-width: 600px;
+  min-width: 300px;
+  border: 2px solid var(--greenfont);
 }
 
 h1,
@@ -168,7 +185,10 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 30vh;
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  /* max-width: 1200px; */
 }
 
 .forte .item {
@@ -179,7 +199,8 @@ button {
 }
 
 .item img {
-  width: 140px;
+  max-width: 140px;
+  min-width: 70px;
 }
 
 .item .premium {
@@ -199,6 +220,8 @@ button {
   display: flex;
   width: calc(100% - 10vw);
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .process .item {
@@ -244,6 +267,7 @@ button {
   height: 200px;
   display: flex;
   flex-direction: column;
+  /* margin-top: 60px; */
 }
 .review {
   font-style: italic;
@@ -323,4 +347,51 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--fontshade);
+}
+
+@media screen and (max-width: 900px) {
+  .hero-cta {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-cta .hero-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--greenfont);
+  }
+
+  .hero-cta .hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hero-cta .hero-text {
+    font-size: 1rem;
+    max-width: 500px;
+  }
+
+  button {
+    padding: 7px 28px;
+    background-color: var(--greenfont);
+    color: var(--white);
+    border: none;
+    width: 150px;
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+  }
+
+  .reviews {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
 }
